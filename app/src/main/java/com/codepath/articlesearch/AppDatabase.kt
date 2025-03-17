@@ -7,11 +7,9 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [FoodEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-
     abstract fun FoodItemDao(): FoodItemDao
 
     companion object {
-
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
