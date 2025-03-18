@@ -1,27 +1,20 @@
 package com.codepath.articlesearch
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.RecyclerView
-import com.codepath.articlesearch.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 private const val TAG = "DashboardFragment"
 class DashboardFragment : Fragment() {
     private val foodItems = mutableListOf<FoodItem>()
-    private lateinit var binding: ActivityMainBinding
     private lateinit var foodItemAdapter: FoodItemAdapter
 
     override fun onCreateView(
@@ -52,13 +45,9 @@ class DashboardFragment : Fragment() {
                     if(foodItems.size > 0) {
                         updateDashboard(averageCalories, minimumCalories, maximumCalories)
                     }
-                    //Log.d("DATABASE", foodItems.toString())
-                    //foodItemAdapter.notifyDataSetChanged()
                 }
             }
         }
-
-        Log.d(TAG, foodItems.toString())
 
         //Clear button
         val clearDataButton = view.findViewById<Button>(R.id.clearDataButton)
@@ -71,10 +60,6 @@ class DashboardFragment : Fragment() {
             minimumCalories.text = "0"
             maximumCalories.text = "0"
         }
-
-
-
-
 
         return view
     }

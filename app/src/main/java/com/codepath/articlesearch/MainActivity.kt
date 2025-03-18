@@ -7,11 +7,7 @@ import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.codepath.articlesearch.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.Dispatchers.IO
@@ -31,7 +27,6 @@ class MainActivity : AppCompatActivity() {
             val newFoodItem = FoodItem(name, calories)
 
             foodItems.add(newFoodItem)
-            //Log.d(TAG, "foodItems: " + foodItems)
 
             //save the items
             foodItems.let { list ->
@@ -67,7 +62,6 @@ class MainActivity : AppCompatActivity() {
                 }.also { mappedList ->
                     foodItems.clear()
                     foodItems.addAll(mappedList)
-                    //Log.d("DATABASE", foodItems.toString())
                     foodItemAdapter.notifyDataSetChanged()
                 }
             }

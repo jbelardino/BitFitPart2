@@ -1,33 +1,20 @@
 package com.codepath.articlesearch
 
-import android.app.Activity.RESULT_OK
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.codepath.articlesearch.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
 private const val TAG = "FoodLogFragment"
-
 class FoodLogFragment : Fragment() {
     private val foodItems = mutableListOf<FoodItem>()
     private lateinit var recyclerView: RecyclerView
-    private lateinit var binding: ActivityMainBinding
     private lateinit var foodItemAdapter: FoodItemAdapter
 
     override fun onCreateView(
@@ -35,7 +22,6 @@ class FoodLogFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_foodlog, container, false)
-        //val progressBar = view.findViewById<View>(R.id.progress) as ContentLoadingProgressBar
         val context = view.context
 
         recyclerView = view.findViewById(R.id.foodItemList)
@@ -58,7 +44,6 @@ class FoodLogFragment : Fragment() {
                 }.also { mappedList ->
                     foodItems.clear()
                     foodItems.addAll(mappedList)
-                    //Log.d("DATABASE", foodItems.toString())
                     foodItemAdapter.notifyDataSetChanged()
                 }
             }
