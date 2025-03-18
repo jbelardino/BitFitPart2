@@ -1,28 +1,44 @@
-# Android Lab Unit 5 - *ArticleSearchPt2*
+# Android Project 6 - *BitFit*
 
 Submitted by: **Jerry Belardino**
 
-**ArticleSearchPt2** is an android app that displays the most recent articles from the NYTimes API and can function without an internet connection
+**BitFit** is a health metrics app that allows users to track nutrition/calories and view a dashboard that gives a summary of the amount of calories.
 
-Time spent: **2** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [x] Displays the most recent articles from the NYTimes api
-* [x] Users can click on an article to get more details
-* [x] The app functions without an internet connection
+- [x] **Use at least 2 Fragments**
+- [x] **Create a new dashboard fragment where users can see a summary of their entered data**
+- [x] **Use one of the Navigation UI Views (BottomNavigation, Drawer Layout, Top Bar) to move between the fragments**
+
+The following **optional** features are implemented:
+
+- [ ] **Add a more advanced UI (e.g: Graphing) for tracking trends in metrics**
+- [ ] **Implement daily notifications to prompt users to fill in their data**
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented features:
+Here's a walkthrough of implemented user stories:
 
 <img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with ScreenToGif
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ScreenToGif  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
+
+Describe any challenges encountered while building the app.
 
 ## License
 
